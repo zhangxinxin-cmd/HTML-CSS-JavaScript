@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //splice(start, deleteCount, ...item)
+        //通过删除或替换现有元素或者原地添加新的元素来修改数组,
+        // 并以数组形式返回被修改的内容。此方法会改变原数组。
+        //start:修改开始的位置，从0开始；deleteCount:移除的元素个数，如果为0，
+        // 则表示直接在start处开始向后添加新元素。
+        let array=[1,2,3,4,5];
+        console.log(array.splice(1, 2));//从index为1的位置开始移除两个元素
+        console.log(array);
+        let array2=[1,2,3,4,5];
+        array2.splice(1,0,8,7);//从index为1开始，移除0个元素，在index1后面添加8,7元素
+        console.log(array2);
+        let array3=[1,2,3,4,5,6];
+        array3.splice(1)//如果deleteCount省略或者deleteCount大于等于array3.length-start，
+        // 那么直接从index位置开始删除后面的元素
+        console.log(array3);
+
+        //slice(begin,end)
+        //返回一个新的数组对象，这一对象是一个由 begin 和 end 决定的原数组的浅拷贝（包括 begin，不包括end）。
+        // 原始数组不会被改变。
+        let array4=[1,2,3,4,5,6];
+        let array5 = array4.slice(2,4);//从index为2开始截取到index为4为止，不包括index为4的元素
+        console.log(array5);
+
+        //concat(value1[, value2[, ...[, valueN]]])
+        //连接数组
+        let array6=[1,2,3,4,5,6,7];
+        let array7=[9,10,11,12];
+        let array8 = array6.concat(array7);
+        console.log(array8);
+        let array9 = array6.concat(8,9,10,11);
+        console.log(array9);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var dog = {
+        name: "旺财",
+        age: 14,
+        jiao: function () {
+          console.log("汪汪汪");
+        },
+      };
+      dog.jiao();
+      function singer(name, age, sex) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+      }
+      var singer1 = new singer("张学友", 15, "女");
+    </script>
+  </head>
+  <body></body>
+</html>

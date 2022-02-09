@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+      }
+      .father {
+        position: relative;
+        overflow: hidden;
+        background-color: pink;
+        /* width: 200px; */
+        height: 200px;
+        margin-top: 100px;
+        margin-left: 200px;
+      }
+      .son {
+        width: 100px;
+        height: 100px;
+        background-color: purple;
+        margin: 50px auto;
+        padding-top: 10px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="father"><div class="son"></div></div>
+    <script>
+      var father = document.querySelector(".father");
+      var son = document.querySelector(".son");
+      console.log(father.offsetTop);
+      console.log(father.offsetLeft);
+      //以带有定位的父亲为标准，如果没有父亲或者父亲没有定位，则以body为标准
+      console.log(son.offsetTop);
+      console.log(father.offsetWidth);
+      console.log(son.offsetHeight);
+      //返回带有定位的父亲，否则返回body
+      console.log(son.offsetParent);
+    </script>
+  </body>
+</html>

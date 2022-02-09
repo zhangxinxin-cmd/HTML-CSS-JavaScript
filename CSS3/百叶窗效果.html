@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #453a94;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      .box {
+        overflow: hidden;
+        width: 1000px;
+        height: 480px;
+        margin: 200px auto;
+      }
+      .box li {
+        position: relative;
+        float: left;
+        width: 200px;
+        height: 100%;
+        transition: all 0.3s;
+      }
+      .box li div {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 30px;
+        color: #fff;
+        line-height: 30px;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      .box:hover li {
+        width: 50px;
+      }
+      .box li:hover {
+        width: 800px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="box">
+      <li>
+        <img src="images/p1 (Small).jpg" alt="" />
+        <div>xiaoke</div>
+      </li>
+      <li>
+        <img src="images/p2(Small).jpg" alt="" />
+        <div>xiaoke</div>
+      </li>
+      <li>
+        <img src="images/p3 (Small).jpg" alt="" />
+        <div>xiaoke</div>
+      </li>
+      <li>
+        <img src="images/p4 (Small).jpg" alt="" />
+        <div>xiaoke</div>
+      </li>
+      <li>
+        <img src="images/p5 (Small).jpg" alt="" />
+        <div>xiaoke</div>
+      </li>
+    </ul>
+  </body>
+</html>

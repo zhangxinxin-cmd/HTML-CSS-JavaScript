@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        let arr=[1,3,4,23,5];
+        //push() 是可以给数组追加新的元素,按照括号里元素的先后顺序加在数组末尾
+        //push()返回值是添加元素后数组的长度
+        let result = arr.push(5);
+        console.log(arr);
+        console.log(arr.push(3, 13));//8 即arr.length
+        console.log(arr);
+        //2.unshift在数组的开头 添加一个或者多个数组元素,按照括号里元素的先后顺序加在数组前
+        //unshift()返回值是添加元素后数组的长度
+        console.log(arr.unshift(3, 'red'));//10
+        console.log(arr);
+        //3.pop() 它可以删除数组的最后一个元素
+        //pop()返回值是删除的元素
+        console.log(arr.pop());//13
+        console.log(arr);
+        //4.shift() 它可以删除数组的第一个元素
+        //4.shift()返回删除的元素
+        console.log(arr.shift());//3
+        console.log(arr);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        padding: 100px;
+      }
+      textarea {
+        resize: none;
+        outline: none;
+      }
+      .message {
+        position: relative;
+        background-color: pink;
+        width: 400px;
+        margin-top: 10px;
+      }
+      .rebtn {
+        position: absolute;
+        right: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea name="" id=""></textarea>
+    <button>发布</button>
+    <ul></ul>
+    <script>
+      var button = document.querySelector("button");
+      var textarea = document.querySelector("textarea");
+      var ul = document.querySelector("ul");
+      button.onclick = function () {
+        var li = document.createElement("li");
+        if (textarea.value == "") {
+          return;
+        }
+        li.innerHTML = textarea.value;
+        li.className = "message";
+        var rebtn = document.createElement("button");
+        rebtn.innerHTML = "删除";
+        rebtn.className = "rebtn";
+        rebtn.onclick = function () {
+          // ul.removeChild(this.parentNode);
+          this.parentNode.remove();
+        };
+        li.appendChild(rebtn);
+        ul.insertBefore(li, ul.children[0]);
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>事件对象</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div>123</div>
+    <script>
+      // event就是一个事件对象，写到我们的监听函数，是一个形参
+      //事件对象只有有了事件才会存在，他是系统自动给我们创建的，不需要我们传递参数
+      //事件对象是我们事件的一系列相关数据的集合
+      //这个事件对象我们可以自己命名
+      var div = document.querySelector("div");
+      div.onclick = function (event) {
+        console.log(event);
+      };
+    </script>
+  </body>
+</html>

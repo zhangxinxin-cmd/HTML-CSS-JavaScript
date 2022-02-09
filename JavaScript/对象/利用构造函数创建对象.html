@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <script>
+      /*function 构造函数名() {
+            this.属性=值;
+            this.方法=function () {
+
+            }
+        }*/
+      //new 构造函数名();
+      function Star(name, age, sex) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        this.sing = function (song) {
+          console.log(song);
+        };
+      }
+      let start = new Star("刘德华", 34, "男");
+      console.log(start.age);
+      console.log(start.sing("唱歌"));
+      //也可以同过“对象[属性/方法名]”的方法来调用对象属性
+      console.log(start["name"]);
+      start["sing"]("伤不起");
+    </script>
+  </head>
+  <body></body>
+</html>

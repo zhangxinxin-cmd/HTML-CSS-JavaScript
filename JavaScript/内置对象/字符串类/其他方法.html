@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //1.替换字符串 replace('被替换的字符串','替换为的字符串') 它只会替换第一个字符
+        let str='andy';
+        console.log(str.replace('a', 'b'));//bndy
+        //有一个字符串 'abcoefoxyozzopp' 要求把里面的所有o替换为*
+         let str2='abcoefoxyozzopp';
+        while (str2.indexOf('o') !== -1) {
+            str2 = str2.replace('o', '*');
+        }
+        console.log(str2);
+        //2.字符串转换为数组 split('分隔符') 备注：join把字符串转换成数组
+        let str3='red,pink,blue';
+        let strings = str3.split(',');
+        console.log(strings);
+        //3.toUpperCase() //转换成大写
+        console.log(str3.toUpperCase());//RED,PINK,BLUE
+        //4.toLowerCase() //转换成小写
+        console.log(str3.toLowerCase());//red,pink,blue
+    </script>
+</head>
+<body>
+
+</body>
+</html>

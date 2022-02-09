@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //字符串的不可变性 值的是里面的值不可变，虽然看上去可以改变内容，但其实是地址变了，内存中新开辟了一个内存空间
+        let str='andy';
+        console.log(str);
+        str='red';
+        console.log(str);
+        //因为我们字符串的不可变,所以不要大量的拼接字符串
+        let str2='';
+        for (let i=0;i<10000000;i++){
+            str2+=i;
+        }
+        console.log(str2)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

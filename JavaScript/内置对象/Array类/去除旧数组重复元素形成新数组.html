@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <script>
+      //数组去重['c','a','z','a','x','a','x','c','b']
+      //目标：把旧数组里面不重复的元素选取出来放到新数组中，重复的元素值保留一个
+      //封装一个元素 去重的函数 unique 独一无二的
+      function unique(array) {
+        let newArray = new Array(0);
+        for (let i = 0; i < array.length; i++) {
+          if (newArray.indexOf(array[i]) === -1) newArray.push(array[i]);
+        }
+        return newArray;
+      }
+      let oldArray = ["c", "a", "z", "a", "x", "a", "x", "c", "b"];
+      let newArray = unique(oldArray);
+      console.log(newArray.toString());
+    </script>
+  </head>
+  <body></body>
+</html>

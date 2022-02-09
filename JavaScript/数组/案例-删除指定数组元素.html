@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //要求：将数组[2,0,6,1,77,0,52,0,25,7]中的0去掉，形成一个不包含0的数组
+        let array = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+        newArray = new Array(array.length);
+        let index = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i]!==0) {
+                newArray[index] = array[i];
+                index++;
+            }
+        }
+        newArray.length = index;
+        array=newArray;
+        for (let i = 0; i < array.length; i++) {
+            console.log(array[i]);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

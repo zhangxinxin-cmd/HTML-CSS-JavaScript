@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-size: "微软雅黑";
+        font-size: 30px;
+      }
+      .box {
+        overflow: hidden;
+        position: relative;
+        width: 300px;
+        height: 200px;
+        background-image: linear-gradient(to right, #fb7299, #ff5c7c);
+        line-height: 200px;
+        border-radius: 13px;
+        text-align: center;
+        margin: 100px auto;
+        cursor: pointer;
+      }
+      .box h1 {
+        color: white;
+        font-size: 40px;
+      }
+      .box::after {
+        content: "";
+        display: block;
+        width: 800px;
+        height: 70px;
+        position: absolute;
+        background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0),
+          rgba(255, 255, 255, 0.3),
+          transparent
+        );
+        /* background-color: red; */
+        left: 0;
+        top: 0;
+        transform: rotate(-45deg) translate(0px, -360px);
+        transition: all 0.5s ease-in-out;
+      }
+      .box:hover::after {
+        transform: rotate(-45deg) translate(0px, 100px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"><h1>bilibili</h1></div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //有一个包含工资的数组[1500,1200,2000,2100,1800],要求把数组中工资超过2000的删除，剩余的放到新数组中.
+        let arr = [1500, 1200, 2000, 2100, 1800,3000,1000];
+        arr.sort((a, b) => a - b);
+        console.log(arr);
+        for (let i = arr.length - 1; i >= 0; i--) {
+            if (arr[i] > 2000) {
+                arr.pop();
+                i++;
+            }
+        }
+        console.log(arr);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div getTime="20" data-index="4" data-list-name="andy">faf</div>
+    <script>
+      var div = document.querySelector("div");
+      div.setAttribute("data-time", 33);
+      console.log(div.getAttribute("getTime"));
+      console.log(div.getAttribute("data-time"));
+      //H5新增的获取自定义属性方法 dataset获取所有以data开头的属性的集合
+      console.log(div.dataset.time);
+      console.log(div.dataset.index);
+      //自定义属性中有多个短横线，我们获取属性的时候采取驼峰命名法
+      console.log(div.dataset.listName);
+    </script>
+  </body>
+</html>

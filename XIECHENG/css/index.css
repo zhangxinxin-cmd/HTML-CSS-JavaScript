@@ -1,0 +1,58 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("fonts/icomoon.eot?vr2jcm");
+  src: url("fonts/icomoon.eot?vr2jcm#iefix") format("embedded-opentype"),
+    url("fonts/icomoon.ttf?vr2jcm") format("truetype"),
+    url("fonts/icomoon.woff?vr2jcm") format("woff"),
+    url("fonts/icomoon.svg?vr2jcm#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+div {
+  box-sizing: border-box;
+}
+body {
+  max-width: 540px;
+  min-width: 320px;
+  width: 540px;
+  margin: 0 auto;
+  font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei";
+  color: #000;
+  background: #f2f2f2;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.search-index {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  padding: 12px 12px 6px;
+  transform: translateX(-50%);
+  /* 固定的盒子必须有宽度 */
+  width: 100%;
+  min-width: 320px;
+  max-width: 540px;
+  height: 44px;
+  /* background-color: pink; */
+}
+.search {
+  position: relative;
+  flex: 1;
+  height: 26px;
+  border: 1.8px solid rgb(0 134 246);
+  border-radius: 16px;
+}
+.search i {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+.search i::before {
+  font-family: "icomoon";
+  content: "\e904";
+  font-size: 14px;
+  color: black;
+}

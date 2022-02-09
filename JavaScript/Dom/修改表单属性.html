@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>按钮</button>
+<input type="text" value="输入内容">
+<script>
+    var btn = document.querySelector('button');
+    var input = document.querySelector('input');
+    btn.onclick = function() {
+        // input.innerHTML='点击了';//没有用
+        //表单里面的值通过value属性修改
+        // input.value='点击了';
+        //如果想要使某个表单标签被禁用，不能再点击 disabled
+        // btn.disabled = true;
+        this.disabled = true;
+        //this指向事件函数调用者
+    }
+    input.onfocus = function() {
+        input.value='';
+    }
+    input.onblur=function() {
+        input.value='输入内容';
+    }
+</script>
+</body>
+</html>

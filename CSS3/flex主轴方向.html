@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        display: flex;
+        width: 800px;
+        height: 600px;
+        padding: 5px;
+        box-sizing: border-box;
+        background-color: pink;
+        /* 默认行方向从左到右排列 */
+        /* 行方向反方向排列 */
+        /* flex-direction: row-reverse; */
+        /* 列方向从上到下排列 */
+        /* flex-direction: column; */
+      }
+      div span {
+        width: 100px;
+        height: 200px;
+        border: 1px solid red;
+        margin-left: -1px;
+        box-sizing: border-box;
+        flex-shrink: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div><span>1</span><span>2</span><span>3</span><span>4</span></div>
+  </body>
+</html>

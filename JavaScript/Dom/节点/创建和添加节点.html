@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>先添加的</li>
+    </ul>
+    <script>
+      var li = document.createElement("li");
+      var ul = document.querySelector("ul");
+      li.innerHTML = "后添加的";
+      ul.appendChild(li);
+      var li2 = document.createElement("li");
+      li2.innerHTML = "插入的";
+      ul.insertBefore(li2, ul.children[0]);
+      //想要添加一个新的元素：1.创建元素2.添加元素
+    </script>
+  </body>
+</html>

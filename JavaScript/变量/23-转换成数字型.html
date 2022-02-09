@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // var age=prompt('请输入您的年龄：');
+        //1.parseInt(变量) 可以吧 字符型的转换成数字型 得到是整数
+        // console.log(parseInt(age));
+        console.log(parseInt('3.14'));//3
+        console.log(parseInt('3.94'));//3
+        console.log(parseInt(23.34));//23
+        console.log(parseInt('-3.2'))//-3
+        console.log(parseInt('120px'));//120
+        console.log(parseInt('r20'));//NaN
+        // 2.parseFloat(变量) 可以把 字符型的转换成数字型 得到是小数
+        console.log(parseFloat('3.14'));//3.14
+        console.log(parseFloat(3.14));//3.14
+        console.log(parseFloat('3.14pf'));//3.14
+        console.log(parseFloat('r23'));//NaN
+        //3.利用Number(变量)
+        var str='123';
+        console.log(Number(str));   //123
+        console.log(Number('12')); //12
+        //4.隐式转换 利用算数运算 - * /隐式转换
+        console.log('12'-0);     //12
+        console.log('123'-'120');//3
+        console.log('123'*1);   //123
+        console.log('123'-1);  //122
+        console.log('123'/1); //123
+        console.log('123'/2);//61.5
+    </script>
+</head>
+<body>
+
+</body>
+</html>

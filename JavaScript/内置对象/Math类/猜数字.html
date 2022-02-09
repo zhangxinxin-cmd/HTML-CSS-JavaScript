@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <script>
+      function getRandom(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+      let exceptionNum = getRandom(1, 10);
+      let i = 0;
+      while (i < 10) {
+        let num = prompt("你来猜？输入1~10之间的一个数字");
+        if (num == exceptionNum) {
+          alert("恭喜你猜对了。");
+          break;
+        } else if (num > exceptionNum) alert("猜大了");
+        else alert("猜小了");
+        i++;
+      }
+      if (i == 10) alert("很遗憾，次数超过十次！游戏失败。");
+    </script>
+  </head>
+  <body></body>
+</html>

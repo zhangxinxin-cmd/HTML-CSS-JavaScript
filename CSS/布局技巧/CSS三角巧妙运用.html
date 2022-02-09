@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 100px;
+        background-color: red;
+      }
+
+      .box1 {
+        width: 0;
+        height: 0;
+        border-color: transparent skyblue;
+        border-style: solid;
+        border-width: 100px 50px 0 0; /* 设置边框top厚度大于right厚度，而bottom，left厚度为0，保证只生成上三角和有三角*/
+        margin-left: 150px;
+      }
+
+      .price {
+        width: 160px;
+        height: 24px;
+        border: 1px solid red;
+        margin: 200px auto;
+        text-align: center;
+        line-height: 24px;
+      }
+
+      .miaosha {
+        position: relative;
+        float: left;
+        width: 90px;
+        height: 100%;
+        margin-right: 8px;
+        background-color: red;
+        color: #ffffff;
+        font-weight: 700;
+      }
+
+      .triangle {
+        position: absolute;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-color: transparent #ffffff;
+        border-style: solid;
+        border-width: 24px 10px 0 0;
+      }
+
+      .origin {
+        font-size: 12px;
+        color: gray;
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <div class="box1"></div>
+    </div>
+    <div class="price">
+      <span class="miaosha"
+        >￥1650
+        <span class="triangle"></span>
+      </span>
+      <span class="origin">￥5650</span>
+    </div>
+  </body>
+</html>

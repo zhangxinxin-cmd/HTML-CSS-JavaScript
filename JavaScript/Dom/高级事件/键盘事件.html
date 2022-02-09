@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.addEventListener("keyup", function (e) {
+        console.log(e);
+        console.log("keyup:" + e.keyCode);
+        console.log(e.key);
+        //keyup和keydown事件不区分字母大小写，a和A得到的都是65
+        //keypress事件区分字母大小写
+      });
+      /* document.addEventListener("keydown", function (e) {
+        console.log("keydown:" + e.keyCode);
+      });
+      document.addEventListener("keypress", function (e) {
+        console.log("keypress:" + e.keyCode);
+      }); */
+    </script>
+  </body>
+</html>

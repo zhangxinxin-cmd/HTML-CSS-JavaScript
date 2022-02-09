@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        let students=0,sum=0,average=0;
+        students=prompt('请输入学生总人数');
+        for (let i = 0; i < students; i++){
+            sum+=parseFloat(prompt('请输入第'+(i+1)+'名学生的成绩'));
+        }
+        average=sum/students;
+        alert('学生的总成绩为：'+sum+'\n学生的平均成绩为：'+average.toFixed(2));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

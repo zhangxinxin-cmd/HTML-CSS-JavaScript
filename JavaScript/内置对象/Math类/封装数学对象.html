@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function MyMath(...array) {
+            this.PI=Math.PI;
+            this.E=Math.E;
+            this.max=Math.max(...array);
+            this.min=function() {
+                return Math.min(...array);
+            }
+        }
+        let myMath = new MyMath(1,2,4);
+        console.log(myMath.min());
+        console.log(myMath.max);
+        console.log(myMath.PI);
+        console.log(myMath.E);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    color: pink;
+    font-size: 20px;
+    /* line-height: 20px; */
+}

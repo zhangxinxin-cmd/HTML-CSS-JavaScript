@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div></div>
+    <script>
+      var div = document.querySelector("div");
+      var timer = 5;
+      fn();
+      setInterval(fn, 1000);
+      function fn() {
+        div.innerHTML = "将在" + timer + "秒钟之后跳转";
+        timer--;
+        if (timer == 0) {
+          location.href = "https://v3.cn.vuejs.org/";
+        }
+      }
+    </script>
+  </body>
+</html>

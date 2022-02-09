@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //1.用我们的布尔值参与的逻辑运算 true && false == false
+        //2.123 && 456 是值 或者是 表达式 参与逻辑运算
+        //3.逻辑与短路运算 如果表达式1 结果为镇 则返回表达式2 如果表达式1为加 那么返回表达式1
+        console.log(123&&456);//456
+        console.log(0&&45);//0
+        console.log(0&&1+2&&456*5678);//0
+        //如果有空的或者否定的为假，其余是真的 0  '' NaN null undefined
+        //4.逻辑或短路运算 如果表达式1 结果为真 则返回的是表达式1 如果表达式1 结果为假 则返回表达式2
+        console.log(123||34);//123
+        console.log(123||456+23);//123
+        console.log(0||456||456+123);//456
+
+        //5.先&&后||
+    </script>
+</head>
+<body>
+
+</body>
+</html>

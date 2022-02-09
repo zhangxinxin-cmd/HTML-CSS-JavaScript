@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 100px;
+        height: 50px;
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <script>
+      var x, y;
+      var div = document.querySelector("div");
+      //clientX,clientY返回鼠标在可视区域的坐标
+      document.addEventListener("mousemove", function (e) {
+        x = e.clientX - 50;
+        y = e.clientY - 25;
+        console.log(x, y);
+        div.style.transform = "translate(" + x + "px" + "," + y + "px" + ")";
+      });
+    </script>
+  </body>
+</html>

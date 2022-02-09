@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @keyframes shining {
+        from {
+          background-position: 0px;
+        }
+        to {
+          background-position: -800px;
+        }
+      }
+      body {
+        background-color: black;
+      }
+      p {
+        width: 1000px;
+        color: rgba(0, 0, 0, 0.3);
+        /* margin: 100px auto; */
+        background: linear-gradient(90deg, black 0%, white 50%, black 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        animation: shining 4s linear infinite alternate;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="neon">【前端实验室】分享前端最新、最实用前端技术</p>
+  </body>
+</html>

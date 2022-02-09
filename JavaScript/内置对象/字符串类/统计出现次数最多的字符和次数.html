@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var str = "abcodebdddeeaaoop";
+      var array = [];
+      for (let index = 0; index < str.length; index++) {
+        var temp = str.charAt(index);
+        if (array[temp]) {
+          array[temp]++;
+        } else {
+          array[temp] = 1;
+        }
+      }
+      var max = 0;
+      var ch;
+      for (value in array) {
+        if (max < array[value]) {
+          max = array[value];
+          ch = value;
+        }
+      }
+      console.log(max + "-" + ch);
+    </script>
+  </head>
+  <body></body>
+</html>

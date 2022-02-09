@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <script>
+      function start(name, age, sex) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        this.sayHi = function () {
+          console.log("Hi");
+        };
+      }
+      var obj = {
+        name: "张三",
+        age: 19,
+        sex: "男",
+        fn: function () {
+          console.log("Hello");
+        },
+      };
+      for (let key in obj) {
+        console.log(key);
+        console.log(obj[key]);
+      }
+
+      let obj2 = new start("张三丰", 24, "男");
+      for (let key2 in obj2) {
+        console.log(key2);
+        console.log(obj2[key2]);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

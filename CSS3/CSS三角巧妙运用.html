@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .price {
+        width: 160px;
+        height: 24px;
+        border: 1px solid red;
+        margin: 250px auto;
+        line-height: 24px;
+        text-align: center;
+      }
+      .miaosha {
+        position: relative;
+        float: left;
+        width: 90px;
+        height: 100%;
+        background-color: red;
+      }
+      .trangle {
+        position: absolute;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-width: 24px 10px 0 0;
+        border-style: solid;
+        border-color: transparent skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="price">
+      <span class="miaosha">
+        ￥1650
+        <span class="trangle"></span>
+      </span>
+      <span class="origin"> ￥5650</span>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        overflow: hidden;
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 100px auto;
+        transition: all 1s ease;
+        border: 1px #d7000f solid;
+        background-color: #d7000f;
+        cursor: pointer;
+      }
+      div::after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 200px;
+        height: 500px;
+        top: -500px;
+        left: 0;
+
+        background: linear-gradient(
+          #d7000f 20%,
+          #e6646f 50%,
+          #9198e5 70%,
+          #d7000f
+        );
+        transition: all 1s ease;
+      }
+      div:hover::after {
+        transform: translateY(500px);
+      }
+      div:hover {
+        background-color: #d7000f;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

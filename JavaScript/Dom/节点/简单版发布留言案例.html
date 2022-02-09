@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        padding: 100px;
+      }
+      textarea {
+        resize: none;
+        outline: none;
+      }
+      ul li {
+        background-color: pink;
+        margin: 10px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea name="" id=""></textarea>
+    <button>发布</button>
+    <ul></ul>
+    <script>
+      var button = document.querySelector("button");
+      var textarea = document.querySelector("textarea");
+      var ul = document.querySelector("ul");
+      button.onclick = function () {
+        var li = document.createElement("li");
+        if (textarea.value == "") {
+          return;
+        }
+        li.innerHTML = textarea.value;
+        ul.insertBefore(li, ul.children[0]);
+      };
+    </script>
+  </body>
+</html>

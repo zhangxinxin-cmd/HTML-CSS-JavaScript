@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        overflow: hidden;
+        width: 100px;
+        height: 100px;
+        background-color: #316796;
+        margin: 200px auto;
+      }
+      .box .lo {
+        width: 100%;
+        height: 100%;
+        line-height: 100px;
+        text-align: center;
+        background-color: #85ceea;
+        transform-origin: left bottom;
+        transition: all 0.2s ease-in;
+      }
+      .box:hover .lo {
+        transform: rotate(90deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"><div class="lo">传媒</div></div>
+  </body>
+</html>

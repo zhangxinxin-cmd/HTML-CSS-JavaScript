@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <script>
+      // 1.js引擎运行js分为两步：预解析和代码执行
+      //(1).预解析 js引擎会把js里面所有的var(提升的仅仅是变量声明)还有function提升到当前作用域的最前面
+      // (2)代码执行 按照代码书写的顺序从上往下执行
+      //2.预解析分为变量预解析(变量提升)和函数预解析(函数提升)
+      console.log(num3);
+      var num3 = 10;
+
+      // let fun;
+      var fun = function () {
+        console.log(33);
+      };
+    </script>
+  </head>
+  <body></body>
+</html>

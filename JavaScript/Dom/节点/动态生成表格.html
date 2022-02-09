@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      a {
+        text-decoration: none;
+        color: pink;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      table {
+        width: 500px;
+        margin: 100px auto;
+        border-collapse: collapse;
+        text-align: center;
+      }
+      td,
+      th {
+        border: 1px solid #333;
+      }
+
+      thead tr {
+        height: 40px;
+        background-color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <table cellspacing="0">
+      <thead>
+        <tr>
+          <th>姓名</th>
+          <th>科目</th>
+          <th>成绩</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      //1.先去准备学生的数据
+      function Student(name, subject, grade) {
+        this.name = name;
+        this.subject = subject;
+        this.grade = grade;
+      }
+      var st1 = new Student("小王", "javaScript", 100);
+      var st2 = new Student("小李", "javaScript", 89);
+      var st3 = new Student("小刘", "javaScript", 60);
+      var st4 = new Student("小最", "javaScript", 100);
+      var datas = [st1, st2, st3, st4];
+      var tbody = document.querySelector("tbody");
+      for (let index = 0; index < datas.length; index++) {
+        var tr = document.createElement("tr");
+        console.log(datas[index]);
+        tbody.appendChild(tr);
+        //单元格的数量取决于每个对象属性的个数
+        for (var key in datas[index]) {
+          var td = document.createElement("td");
+          td.innerHTML = datas[index][key];
+          tr.appendChild(td);
+        }
+        var delTd = document.createElement("td");
+        delTd.innerHTML = "<a href='javascript:;'>删除</a>";
+        tr.appendChild(delTd);
+      }
+      var as = document.querySelectorAll("a");
+      for (let i = 0; i < as.length; i++) {
+        as[i].onclick = function () {
+          tbody.removeChild(this.parentNode.parentNode);
+        };
+      }
+    </script>
+  </body>
+</html>

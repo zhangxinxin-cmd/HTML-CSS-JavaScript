@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #000;
+      }
+      @keyframes change {
+        from {
+        }
+        to {
+          filter: blur(2px);
+          transform: scale(2);
+          border-bottom-color: rgba(234, 85, 20, 0.3);
+        }
+      }
+      @keyframes move {
+        /* from 和 to 等价于 0% 和100%f */
+        from {
+          transform: translateX(0px);
+        }
+        to {
+          transform: translateX(100px);
+        }
+      }
+      .tree {
+        display: flex;
+        margin: 200px auto;
+        width: 250px;
+        height: 200px;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+      .tree > div {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .tree div[class^="left"] {
+        border: 20px solid #000;
+        border-radius: 15px;
+        border-bottom-color: rgba(234, 85, 20, 1);
+        animation: change 5s linear infinite alternate;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tree">
+      <div class="floor1">
+        <div class="left1"></div>
+      </div>
+      <div class="floor2">
+        <div class="left2"></div>
+        <div class="left3"></div>
+      </div>
+      <div class="floor3">
+        <div class="left4"></div>
+        <div class="left5"></div>
+        <div class="left6"></div>
+      </div>
+    </div>
+  </body>
+</html>

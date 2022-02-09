@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM事件流三阶段</title>
+    <style>
+      .father {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        margin: 100px auto;
+      }
+      .son {
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        color: white;
+        line-height: 100px;
+        transform: translate(50%, 50%);
+        background-color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="father">
+      <div class="son">son盒子</div>
+    </div>
+    <script>
+      var son2 = document.querySelector(".son");
+      son2.addEventListener(
+        "click",
+        function (event) {
+          alert("son");
+          event.stopPropagation();
+        },
+        false
+      );
+      var fatcher2 = document.querySelector(".father");
+      fatcher2.addEventListener(
+        "click",
+        function () {
+          alert("father");
+        },
+        false
+      );
+    </script>
+  </body>
+</html>

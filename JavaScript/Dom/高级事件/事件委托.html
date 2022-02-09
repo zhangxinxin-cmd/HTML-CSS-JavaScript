@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>事件委托</title>
+  </head>
+  <body>
+    <ul>
+      <li>知否知否，应是绿肥红瘦</li>
+      <li>知否知否，应是绿肥红瘦</li>
+      <li>知否知否，应是绿肥红瘦</li>
+      <li>知否知否，应是绿肥红瘦</li>
+      <li>知否知否，应是绿肥红瘦</li>
+    </ul>
+    <script>
+      var i = 1;
+      var ul = document.querySelector("ul");
+      ul.addEventListener("click", function (e) {
+        if (i === 1) {
+          e.target.style.backgroundColor = "pink";
+        } else {
+          e.target.style.backgroundColor = "white";
+        }
+        i = ~i;
+      });
+    </script>
+  </body>
+</html>

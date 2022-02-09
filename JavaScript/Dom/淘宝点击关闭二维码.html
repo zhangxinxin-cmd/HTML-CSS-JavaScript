@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .QR {
+            width: 160px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%) translateY(50%);
+            color: #ef4f2b;
+        }
+
+        #wrong {
+            position: absolute;
+            left: 0;
+            top: 0;
+            cursor: pointer;
+        }
+
+        p {
+            padding-left: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="QR">
+    <p>手机淘宝</p>
+    <img src="images/tao.png" alt="" id="tao">
+    <img src="images/wrong.png" alt="" id="wrong">
+</div>
+<script>
+    var QR = document.querySelector('.QR');
+    var wrong = document.querySelector('#wrong');
+    wrong.onclick=function() {
+        QR.style.display='none';
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @keyframes run {
+        from {
+          background-position: 0 0;
+        }
+        to {
+          background-position: -1600px 0;
+        }
+      }
+      @keyframes run2 {
+        from {
+          transform: translate(0);
+        }
+        to {
+          transform: translate(800px);
+        }
+      }
+      body {
+        background-color: #ccc;
+      }
+      .bear {
+        width: 200px;
+        height: 100px;
+        background: url(images/runningBear.png) no-repeat;
+        animation: run 0.7s steps(8) infinite;
+      }
+      .box {
+        width: 200px;
+        height: 100px;
+        margin-top: 200px;
+        animation: run2 8s linear infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"><div class="bear"></div></div>
+  </body>
+</html>
